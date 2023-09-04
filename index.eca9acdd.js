@@ -1,2 +1,0 @@
-const e=document.querySelectorAll(".cell");let t="X",l=!0;function a(a){if(!l)return;const r=a.target;var c;""===r.dataset.cell&&(r.innerText=t,r.dataset.cell=t,c=t,[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]].some((t=>t.every((t=>e[t].dataset.cell===c))))?(alert(`Gracz ${t} wygrał!`),l=!1):[...e].every((e=>""!==e.dataset.cell))?(alert("Remis!"),l=!1):t="X"===t?"O":"X")}e.forEach((e=>{e.addEventListener("click",a)}));
-//# sourceMappingURL=index.eca9acdd.js.map
