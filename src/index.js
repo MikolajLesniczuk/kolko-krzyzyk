@@ -1,9 +1,11 @@
 const cells = document.querySelectorAll('.cell');
+const reset = document.querySelector('.reset');
 let currentPlayer = 'X';
 let gameActive = true;
 
 cells.forEach(cell => {
   cell.addEventListener('click', handleCellClick);
+  //   console.log(cell.dataset);
 });
 
 function handleCellClick(e) {
@@ -54,3 +56,5 @@ function resetBoard() {
   currentPlayer = 'X';
   gameActive = true;
 }
+
+reset.addEventListener('click', resetBoard);
